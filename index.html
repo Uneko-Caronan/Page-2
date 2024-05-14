@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1e1e1e; 
+            font-family: 'Roboto', sans-serif; 
+            color: #e0e0e0; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #2c2c2c; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100px; 
+            height: auto; 
+            border-radius: 50%; 
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            float: left;
+            font-weight: 700;
+        }
+        .form-control {
+            background-color: #333; 
+            border: none;
+            color: #e0e0e0;
+        }
+        .form-control:focus {
+            background-color: #444;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <img id="logo" src="https://img.lazcdn.com/g/ff/kf/S8174edb598304709b2f87756330aaba04.jpg_720x720q80.jpg" alt="Logo">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
+            <button type="submit" id="loginButton" class="btn btn-primary">Login</button>
+        </form>
+        <a href="https://uneko-caronan.github.io/Page-1/" class="btn btn-secondary">Main Page</a>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'Unico999' && password === '999') {
+                window.location.href = 'https://uneko-caronan.github.io/Page-3/';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
